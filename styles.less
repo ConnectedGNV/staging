@@ -1,8 +1,39 @@
+@import 'colors.less';
 @import 'global.less';
+@import 'general.less';
+
+@sectionPadding: 15px;
+
+@color_primary: @color_teal;
+@color_secondary: @color_purple_lite_2;
+@color_tertiary: @color_red_lite_2;
+@color_off: @color_white;
+
+
+.b-button {
+    font-size: 1rem;
+    border: 1px solid @color_gray;
+    border-radius: 3px;
+    padding: 0 15px;
+    line-height: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.b-copy {
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+}
+
+
 
 .b-splash {
-    background: blue;
-    padding: 120px 0;
+    background: @color_primary;
+    padding: 120px @sectionPadding;
 }
 
 .b-splash__container {
@@ -48,13 +79,14 @@
 
 
 .b-main-cta {
-    background: lightblue;
-    padding: 60px 0;
+    background: @color_off;
+    padding: 60px @sectionPadding;
+    border-bottom: 1px solid @color_gray_lite;
 }
 
 .b-main-cta__container {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1000px;
     text-align: center;
 }
 
@@ -64,9 +96,11 @@
 
 .b-main-cta__button {
     display: inline-block;
-    padding: 15px;
-    margin-top: 15px;
-    background: red;
+    margin-top: 30px;
+    padding: 8px 20px;
+    background: @color_secondary;
+    color: white;
+    font-size: 1.5rem;
 }
 
 .b-main-cta__button--down {
@@ -80,8 +114,8 @@
 
 
 .b-about {
-    background: green;
-    padding: 60px 0;
+    background: @color_off;
+    padding: 60px @sectionPadding;
 }
 
 .b-about__container {
@@ -94,11 +128,12 @@
 .b-about__img {
     width: 225px;
     height: 225px;
+    margin-top: 15px;
     margin-right: 50px;
     float: left;
-    border: 3px solid purple;
+    border: 1px solid @color_purple_lite_1;
     border-radius: 50%;
-
+    overflow: hidden;
 
     img {
         max-width: 100%;
@@ -107,25 +142,45 @@
 
 .b-about__copy {
     padding: 30px 0;
+    margin-left: 275px;
 }
 
 
 
 .b-map {
+    padding: 30px;
+    background: @color_purple_lite_2;
+}
 
+.b-map__container {
+    padding: 20px;
+    border: 1px solid @color_gray_dark;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: @color_off;
+    text-align: center;
 }
 
 .b-map__heading {
 
 }
 
-.b-map_copy {
+.b-map__copy {
 
+}
+
+.b-map__svg {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
 }
 
 
 .b-quote {
-    padding: 60px 0;
+    padding: 60px @sectionPadding;
+    background: @color_teal_lite_1;
+    color: white;
 }
 
 .b-quote__container {
@@ -136,6 +191,8 @@
 
 .b-quote__copy {
     text-align: left;
+    line-height: 1.8rem;
+    font-size: 1.3rem;
 }
 
 .b-quote__author {
@@ -146,8 +203,8 @@
 
 
 .b-alt-cta {
-    padding: 60px 0;
-    background: coral;
+    padding: 60px @sectionPadding;
+    background: @color_off;
 }
 
 .b-alt-cta__container {
@@ -168,26 +225,26 @@
 }
 
 .b-alt-cta__input {
+    min-width: 300px;
+    line-height: 2rem;
+    padding: 0 10px;
+    margin-right: 25px;
     float: left;
-    margin-right: 30px;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    border: 1px solid @color_gray;
 }
 
 .b-alt-cta__button {
     float: left;
-    font-size: 1rem;
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 0 15px;
-    line-height: 1.9rem;
-    background: white;
+    background: @color_off;
 }
 
 
 .b-socials {
-    padding: 60px 0 120px 0;
-    background: cyan;
+    padding: 60px @sectionPadding 120px @sectionPadding;
+    background: @color_teal_lite_1;
     text-align: center;
+    color: white;
 }
 
 .b-socials__copy {
@@ -207,13 +264,13 @@
 .b-socials__icon {
     width: 60px;
     height: 60px;
-    border: 1px solid red;
+    border: 1px solid white;
     border-radius: 50%;
 }
 
 
 
 .b-copyright {
-    padding: 40px 0;
-    background: gray;
+    padding: 40px @sectionPadding;
+    background: @color_secondary;
 }

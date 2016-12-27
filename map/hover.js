@@ -34,8 +34,6 @@ for (let i = 0; i < districtIDs.length; i++) {
     const district = districtIDs[i]
     const {id, number, colorDefault, colorHover} = district
 
-    console.log(document.querySelector(`[id=g4160]`))
-
     let el = document.querySelector(`[id=${id}]`)
 
     el.onmouseover = function() {

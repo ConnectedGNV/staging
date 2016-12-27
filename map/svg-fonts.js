@@ -1,7 +1,3 @@
-
-const district1ID = 'g4160'
-
-
 //set fonts
 const texts = document.getElementsByTagName('text')
 
