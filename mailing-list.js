@@ -1,7 +1,23 @@
+
+const $modal = $('#modal')
+const $loading = $('#state-loading')
+const $success = $('#state-success')
+const $error = $('#state-error')
+
 const form = document.getElementById('mailing')
+
+const hideModal = () => {
+    setTimeout(function() {
+        $modal.hide()
+    }, 4000)
+}
+
 
 form.onsubmit = (ev) => {
     ev.preventDefault()
+
+    $modal.show()
+    $loading.show()
 
     const input = document.getElementById('alt-cta-input')
 
@@ -25,12 +41,23 @@ form.onsubmit = (ev) => {
         contentType: 'application/json; charset=utf-8',
         error: function(err) {
             console.log("Could not connect to the registration server. Please try again later.")
+
+            $error.show()
+            hideModal()
         },
         success: function(data) {
             if (data.result !== "success") {
                 console.log('error: ', data.msg)
+
+                $loading.hide()
+                $error.show()
+                hideModal()
             } else {
                 console.log('success')
+
+                $loading.hide()
+                $success.show()
+                hideModal()
             }
         }
     });

@@ -103,7 +103,7 @@
     display: inline-block;
     margin-top: 30px;
 
-    .clearfix;
+    //.clearfix;
 }
 
 .b-splash__cta__input {
@@ -358,4 +358,97 @@
 .b-copyright {
     padding: 40px @sectionPadding;
     background: @color_secondary;
+}
+
+
+.b-citations {
+    padding: 60px @sectionPadding 120px @sectionPadding;
+    background: @color_teal_lite_1;
+}
+
+.b-citations__container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.b-citations__header {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.b-citations__citation {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.b-citations__link {
+    display: block;
+    margin-top: 10px;
+    color: inherit;
+}
+
+
+.b-state {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3)
+}
+
+.b-state__container {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+}
+
+.b-state__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+
+    height: 300px;
+    line-height: 1.8rem;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
+}
+
+.b-state__loading {
+    text-align: center;
+}
+
+.b-state__copy {
+    display: none;
+    text-align: center;
+    padding: 100px 15px 0 15px;
+}
+
+.b-state__success {
+    color: green;
+}
+
+.b-state__error {
+    color: red;
+}
+
+#loading {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
