@@ -4,7 +4,21 @@ const $loading = $('#state-loading')
 const $success = $('#state-success')
 const $error = $('#state-error')
 
+const button = document.getElementById('alt-cta-button')
 const form = document.getElementById('mailing')
+const email = document.getElementById('alt-cta-input')
+
+const validateInput = function () {
+    if (validateEmail(email.value)) {
+        button.disabled = false;
+    } else {
+        button.disabled = true;
+    }
+}
+
+email.oninput = validateInput
+
+email.onchange = validateInput
 
 const hideModal = () => {
     setTimeout(function() {
@@ -63,3 +77,7 @@ form.onsubmit = (ev) => {
     });
 }
 
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}

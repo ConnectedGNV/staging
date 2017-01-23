@@ -22,6 +22,14 @@
     &:hover {
         opacity: 0.75;
     }
+
+    &:disabled:hover {
+        opacity: 1;
+    }
+
+    &:disabled {
+        background: @color_gray_lite;
+    }
 }
 
 .b-copy {
@@ -101,7 +109,6 @@
 
 .b-splash__cta__form {
     display: inline-block;
-    margin-top: 30px;
 
     //.clearfix;
 }
@@ -111,7 +118,8 @@
     line-height: 2rem;
     padding: 0 10px;
     margin-right: 25px;
-    float: left;@color_primary
+    margin-top: 30px;
+    float: left;@color_primary;
     font-size: 1rem;
     border: 1px solid @color_gray;
 }
@@ -119,6 +127,7 @@
 .b-splash__cta__button {
     float: left;
     background: @color_off;
+    margin-top: 30px;
 }
 
 .b-splash__copy {
@@ -190,6 +199,7 @@
     padding: 60px @sectionPadding;
     background: @color_gray_lite;
     border-top: 1px solid @color_gray;
+    border-bottom: 1px solid @color_gray;
 }
 
 .b-stats__copy {
