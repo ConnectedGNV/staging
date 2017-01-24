@@ -20,12 +20,11 @@ email.oninput = validateInput
 
 email.onchange = validateInput
 
-const hideModal = () => {
+const hideModal = (time) => {
     setTimeout(function() {
         $modal.hide()
-    }, 4000)
+    }, time)
 }
-
 
 form.onsubmit = (ev) => {
     ev.preventDefault()
@@ -33,31 +32,19 @@ form.onsubmit = (ev) => {
     $modal.show()
     $loading.show()
 
-    const input = document.getElementById('alt-cta-input')
+    const $form = $(form)
 
-    const listID = '611307f043'
-    const u = '6e9bd095d4e4fbd9ebb1d63da'
-    const url = `//connectgnv.us14.list-manage.com/subscribe/post-json?u=${u}&id=${listID}&c=?`
-    const email = input.value
-//
-    const payload = {
-        'EMAIL': email,
-        'b_6e9bd095d4e4fbd9ebb1d63da_611307f043': true,
-    }
-
-    //only reason we need jquery
     $.ajax({
-        type: 'POST',
-        url: url,
-        data: payload,
-        cache: false,
-        dataType: 'json',
-        contentType: 'application/json; charset=utf-8',
-        error: function(err) {
-            console.log("Could not connect to the registration server. Please try again later.")
-
+        type: 'GET',
+        url: $form.attr('action'),
+        data: $form.serialize(),
+        cache       : false,
+        dataType: "jsonp",
+        jsonp: "c", // trigger MailChimp to return a JSONP response
+        contentType: "application/json; charset=utf-8",
+        error       : function(err) {
             $error.show()
-            hideModal()
+            hideModal(4000)
         },
         success: function(data) {
             if (data.result !== "success") {
@@ -65,13 +52,15 @@ form.onsubmit = (ev) => {
 
                 $loading.hide()
                 $error.show()
-                hideModal()
+                hideModal(4000)
             } else {
                 console.log('success')
 
+                email.value = ''
+
                 $loading.hide()
                 $success.show()
-                hideModal()
+                hideModal(6000)
             }
         }
     });
