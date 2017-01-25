@@ -178,6 +178,12 @@
     text-align: center;
 }
 
+.b-stats__header {
+    margin-bottom: 50px;
+    font-weight: normal;
+    font-size: 1.7rem;
+}
+
 .b-stats__stat {
     display: inline-block;
     width: 300px;
@@ -185,8 +191,29 @@
 }
 
 .b-stats__heading {
-    font-size: 1rem;
-    margin-bottom: 15px;
+    font-size: 1.3rem;
+    margin: 25px auto 35px auto;
+    width: 4.2rem;
+    height: 4.2rem;
+    line-height: 4.3rem;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.2);
+    opacity: 0.9;
+
+    &.alabama {
+        color: #ff6801;
+        background: #1974d2;
+    }
+
+    &.georgia {
+        color: #000000;
+        background: #de291e;
+    }
+
+    &.texas {
+        color: #fdfbfc;
+        background: #710001;
+    }
 }
 
 .b-stats__number {
@@ -204,6 +231,10 @@
     font-size: 0.7rem;
     margin-left: 5px;
     vertical-align: top;
+}
+
+.b-sec {
+    color: #474747
 }
 
 
