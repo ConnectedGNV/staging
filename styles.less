@@ -399,9 +399,9 @@
 
 .b-socials {
     padding: 60px @sectionPadding 120px @sectionPadding;
-    background: @color_teal_lite_1;
+    background: @color_white;
     text-align: center;
-    color: white;
+    border-top: 1px solid @color_gray_dark;
 }
 
 .b-socials__copy {
@@ -421,8 +421,25 @@
 .b-socials__icon {
     width: 60px;
     height: 60px;
-    border: 1px solid white;
     border-radius: 50%;
+    color: @color_white;
+    font-size: 35px;
+
+    & i:before {
+        line-height: 60px;
+    }
+
+    &.twitter {
+        background: #00aced;
+    }
+
+    &.facebook {
+        background: #3b5998;
+    }
+
+    &.github {
+        background: #767676;
+    }
 }
 
 
