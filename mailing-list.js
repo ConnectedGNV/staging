@@ -62,6 +62,8 @@ form.onsubmit = (ev) => {
                 console.log('success')
 
                 email.value = ''
+                fname.value = ''
+                lname.value = ''
 
                 $loading.hide()
                 $success.show()
