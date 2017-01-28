@@ -229,30 +229,8 @@
 }
 
 .b-stats__heading {
-    font-size: 1.3rem;
-    margin: 25px auto 35px auto;
-    width: 4.2rem;
-    height: 4.2rem;
-    line-height: 4.3rem;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.2);
-    opacity: 0.85;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
 
-    &.alabama {
-        color: #ff6801;
-        background: #1974d2;
-    }
 
-    &.georgia {
-        color: #000000;
-        background: #de291e;
-    }
-
-    &.texas {
-        color: #fdfbfc;
-        background: #710001;
-    }
 }
 
 .b-stats__number {
@@ -272,9 +250,8 @@
     vertical-align: top;
 }
 
-.b-sec {
+.b-fl, .b-sec {
     color: #474747;
-    background-image: url('assets/sec.jpg');
     background-size: cover;
     padding: 70px 50px 85px 50px;
 
@@ -288,6 +265,47 @@
 
     .b-stats__number {
         color: #333333;
+    }
+}
+
+.b-fl {
+    background-image: url('assets/fl.jpg');
+
+
+    .b-stats__heading {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+}
+
+.b-sec {
+    background-image: url('assets/sec.jpg');
+
+    .b-stats-heading {
+        font-size: 1.3rem;
+        margin: 25px auto 35px auto;
+        width: 4.2rem;
+        height: 4.2rem;
+        line-height: 4.3rem;
+        border-radius: 50%;
+        border: 1px solid rgba(0,0,0,0.2);
+        opacity: 0.85;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+
+        &.alabama {
+            color: #ff6801;
+            background: #1974d2;
+        }
+
+        &.georgia {
+            color: #000000;
+            background: #de291e;
+        }
+
+        &.texas {
+            color: #fdfbfc;
+            background: #710001;
+        }
     }
 }
 
@@ -436,7 +454,7 @@
 
 
 .b-socials {
-    padding: 60px @sectionPadding 120px @sectionPadding;
+    padding: 60px @sectionPadding 90px @sectionPadding;
     background: @color_white;
     text-align: center;
     border-top: 1px solid @color_gray_dark;
