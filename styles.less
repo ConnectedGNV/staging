@@ -116,12 +116,19 @@
 
 .b-splash__cta__form {
     display: inline-block;
+    max-width: 415px;
 
     //.clearfix;
 }
 
+.b-splash__cta__form__inner {
+    overflow: auto;
+    width: 100%
+}
+
 .b-splash__cta__input {
-    min-width: 300px;
+    max-width: 300px;
+    width: 100%;
     line-height: 2rem;
     padding: 0 10px;
     margin-right: 25px;
@@ -129,6 +136,15 @@
     float: left;@color_primary;
     font-size: 1rem;
     border: 1px solid @color_gray;
+
+    &#alt-cta-last-name {
+        margin-right: 0;
+        max-width: 194px;
+    }
+
+    &#alt-cta-first-name {
+        max-width: 194px;
+    }
 }
 
 .b-splash__cta__button {

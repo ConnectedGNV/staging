@@ -6,10 +6,12 @@ const $error = $('#state-error')
 
 const button = document.getElementById('alt-cta-button')
 const form = document.getElementById('mailing')
-const email = document.getElementById('alt-cta-input')
+const email = document.getElementById('alt-cta-email')
+const fname = document.getElementById('alt-cta-first-name')
+const lname = document.getElementById('alt-cta-last-name')
 
 const validateInput = function () {
-    if (validateEmail(email.value)) {
+    if (validateEmail(email.value) && fname.value && lname.value) {
         button.disabled = false;
     } else {
         button.disabled = true;
@@ -17,8 +19,11 @@ const validateInput = function () {
 }
 
 email.oninput = validateInput
-
 email.onchange = validateInput
+fname.oninput = validateInput
+fname.onchange = validateInput
+lname.oninput = validateInput
+lname.onchange = validateInput
 
 const hideModal = (time) => {
     setTimeout(function() {
