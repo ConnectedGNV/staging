@@ -63,21 +63,43 @@
 
 .b-splash__logo-container {
     position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+
 }
 
-.b-splash__logo {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
+.b-splash__logo-content {
+    width: 100%;
+    padding-bottom: 100%;
+
     border: 3px solid @color_white;
     border-radius: 50%;
     background: @color_primary;
+}
+
+.b-splash__logo {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: -18px;
+    right: 0;
+    bottom: 0;
+
+    &:before {
+        content: ' ';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.b-splash__logo-inner {
+    display: inline-block;
+    vertical-align: middle;
 
     img {
-        max-width: 100%;
-        width: 200px;
-        padding-top: 100px;
-        padding-left: 90px;
+        max-width: 200px;
+        width: 100%;
     }
 }
 
