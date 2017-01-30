@@ -28,7 +28,7 @@ lname.onchange = validateInput
 form.onsubmit = function(ev) {
     ev.preventDefault()
 
-    var mailingListURl = 'http://connectgnv.us14.list-manage1.com/subscribe?u=6e9bd095d4e4fbd9ebb1d63da&id=611307f043'
+    var mailingListURl = 'http://connectedgnv.us14.list-manage1.com/subscribe?u=6e9bd095d4e4fbd9ebb1d63da&id=611307f043'
 
     var fieldString = params({
         'MERGE0': email.value,
@@ -39,6 +39,10 @@ form.onsubmit = function(ev) {
     var url = mailingListURl + '&' + fieldString
 
     window.open(url)
+
+    email.value = ''
+    fname.value = ''
+    lname.value = ''
 
 }
 
@@ -71,9 +75,6 @@ form.onsubmit = function(ev) {
 //             } else {
 //                 console.log('success')
 //
-//                 email.value = ''
-//                 fname.value = ''
-//                 lname.value = ''
 //
 //                 $loading.hide()
 //                 $success.show()
