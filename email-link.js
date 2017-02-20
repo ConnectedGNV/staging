@@ -20,7 +20,7 @@
     var mailto = {
         address: 'citycomm@cityofgainesville.org',
         cc: '',
-        bcc: 'connectedgainesivlle@gmail.com',
+        bcc: 'connectedgainesville@gmail.com',
         subject: 'We must improve our internet choices.',
         body: body,
     }
