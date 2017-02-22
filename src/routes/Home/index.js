@@ -3,6 +3,7 @@ import Splash from './components/Splash'
 import Stats from './components/Stats'
 import TakeAction from './components/TakeAction'
 import Florida from './components/Florida'
+import Socials from './components/Socials'
 
 class Home extends Component {
     render() {
@@ -11,6 +12,7 @@ class Home extends Component {
             <Stats/>
             <TakeAction/>
             <Florida/>
+            <Socials/>
         </div>
     }
 }

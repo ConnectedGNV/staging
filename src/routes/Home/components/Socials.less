@@ -1,0 +1,56 @@
+@import "../../../variables.less";
+
+.container {
+  padding: 60px @sectionPadding 90px @sectionPadding;
+  background: @color_white;
+  text-align: center;
+  border-top: 1px solid @color_gray_dark;
+}
+
+.copy {
+  font-size: 2rem;
+}
+
+.icons {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.anchor {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: @color_white;
+  font-size: 35px;
+}
+
+.email, .twitter, .facebook, .github {
+  composes: icon;
+}
+
+.email {
+  background: #d14836;
+}
+
+.twitter {
+  background: #00aced;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.github {
+  background: #767676;
+}
+
+.i {
+  &:before {
+    line-height: 60px;
+  }
+}
