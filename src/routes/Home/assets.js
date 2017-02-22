@@ -53,3 +53,17 @@ export const take_action = {
         "all options, from simplifying our permitting, public/private partnerships, to full municipal " +
         "broadband. \r\n",
 }
+
+export const citations = [
+    {
+        blurb: 'According to the FCC',
+        link: 'http://www.gainesville.com/news/20151128/fast-internet-leaves-households-behind',
+    },
+    {
+        blurb: 'Standard rate + fees compared to St. Petersburg, Florida.',
+    },
+    {
+        blurb: 'According to research done by Analysis Group.',
+        link: 'http://www.ftthcouncil.org/p/bl/et/blogid=3&blogaid=305',
+    },
+]
