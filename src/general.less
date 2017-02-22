@@ -1,0 +1,39 @@
+@import "variables.less";
+
+:global {
+    body {
+        margin: 0;
+        font-family: Montserrat;
+    }
+
+
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.button {
+    font-size: 1rem;
+    border: 1px solid @color_gray;
+    border-radius: 3px;
+    padding: 0 15px;
+    line-height: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    min-width: 90px;
+
+    &:hover {
+        -webkit-filter: hue-rotate(45deg);
+        filter: hue-rotate(45deg);
+    }
+
+    &:disabled:hover {
+        opacity: 1;
+    }
+
+    &:disabled {
+        background: @color_gray_lite;
+    }
+}

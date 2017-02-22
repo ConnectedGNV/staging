@@ -1,0 +1,88 @@
+@import "../../../variables.less";
+
+
+.main {
+  position: relative;
+  padding: 90px @sectionPadding 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 840px;
+  text-align: center;
+}
+
+.copy {
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+.copy__container {
+  background: @color_white;
+  padding: 15px;
+  color: black;
+}
+
+.petition {
+  padding: 15px;
+}
+
+.header {
+  margin-bottom: 25px;
+  color: white;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.tagline {
+  text-align: center;
+  color: @color_white;
+  max-width: 580px;
+  margin: 0 auto 45px auto;
+}
+
+.form {
+  display: inline-block;
+  max-width: 415px;
+
+  //.clearfix;
+}
+
+.form__inner {
+  overflow: auto;
+  width: 100%
+}
+
+.input {
+  max-width: 300px;
+  width: 100%;
+  line-height: 2rem;
+  padding: 0 10px;
+  margin-right: 25px;
+  margin-top: 30px;
+  float: left;@color_primary;
+  font-size: 1rem;
+  border: 1px solid @color_gray;
+
+  &#petition-last-name {
+    margin-right: 0;
+    max-width: 194px;
+  }
+
+  &#petition-first-name {
+    max-width: 194px;
+  }
+}
+
+.button {
+  composes: button from '../../../general.less';
+  float: left;
+  background: @color_off;
+  margin-top: 30px;
+}
+
+
+.disclaimer {
+  font-size: 0.7rem;
+  color: @color_gray;
+}

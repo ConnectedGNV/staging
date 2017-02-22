@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+{% if page.url != "/index.html" %}
+
+<body>
+
+{% else %}
+
+<body class="home">
+
+{% endif %}
+
+<div id="main">
+
+    {{ content }}
+
+</div>
+
+{% include bottom.html %}
+
+</body>
+
+{% if page.id %}
+
+{% endif %}
+
+</html>
