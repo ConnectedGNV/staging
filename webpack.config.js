@@ -1,9 +1,8 @@
 "use strict";
-var path = require('path');
 
 module.exports = {
 	entry: './src/index.js',
-	output: { path: __dirname, filename: 'dist/bundle.js' },
+	output: { path: __dirname, filename: 'public/dist/bundle.js' },
     module: {
         loaders: [
             {

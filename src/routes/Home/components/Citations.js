@@ -4,7 +4,7 @@ import { citations } from '../assets'
 
 class Citations extends Component {
     render() {
-        return <div className={css.container}>
+        return <div id="citations" className={css.container}>
             <div className={css.inner}>
                 <div className={css.header}>Citations</div>
                 {citations.map(({ link, blurb }, i) => {

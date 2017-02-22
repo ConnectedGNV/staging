@@ -9,7 +9,7 @@ class Splash extends Component {
                 <div className={css['logo-content']}>
                     <div className={css.logo}>
                         <div className={css['logo-inner']}>
-                            <img src="assets/logo.white.png"/>
+                            <img src="/public/images/logo.white.png"/>
                         </div>
                     </div>
                 </div>

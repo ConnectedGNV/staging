@@ -56,7 +56,7 @@ export const take_action = {
 
 export const citations = [
     {
-        blurb: 'According to the FCC',
+        blurb: 'According to the FCC.',
         link: 'http://www.gainesville.com/news/20151128/fast-internet-leaves-households-behind',
     },
     {

@@ -44,7 +44,7 @@
 .form {
   display: inline-block;
   max-width: 415px;
-
+  margin-bottom: 15px;
   //.clearfix;
 }
 
@@ -63,15 +63,17 @@
   float: left;@color_primary;
   font-size: 1rem;
   border: 1px solid @color_gray;
+}
 
-  &#petition-last-name {
-    margin-right: 0;
-    max-width: 194px;
-  }
+.input__first_name {
+  composes: input;
+  max-width: 194px;
+}
 
-  &#petition-first-name {
-    max-width: 194px;
-  }
+.input__last_name {
+  composes: input;
+  margin-right: 0;
+  max-width: 194px;
 }
 
 .button {

@@ -59,8 +59,8 @@ class Petition extends Component {
                         onSubmit={this.onSubmit}
                     >
                         <div className={css.form__inner}>
-                            <input ref="fname" id="petition-first-name" name="first_name" className={css.input} type="text" placeholder="First name.."/>
-                            <input ref="lname" id="petition-last-name" name="last_name" className={css.input} type="text" placeholder="Last name.."/>
+                            <input ref="fname" id="petition-first-name" name="first_name" className={css.input__first_name} type="text" placeholder="First name.."/>
+                            <input ref="lname" id="petition-last-name" name="last_name" className={css.input__last_name} type="text" placeholder="Last name.."/>
                             <input ref="email" id="petition-email" name="email" className={css.input} type="email" placeholder="email.."/>
                             <input ref="button" id="petition-button" name="sign" type="submit" className={css.button} value="Sign"disabled/>
                         </div>

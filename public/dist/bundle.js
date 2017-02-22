@@ -3816,7 +3816,7 @@ var take_action = exports.take_action = {
 };
 
 var citations = exports.citations = [{
-    blurb: 'According to the FCC',
+    blurb: 'According to the FCC.',
     link: 'http://www.gainesville.com/news/20151128/fast-internet-leaves-households-behind'
 }, {
     blurb: 'Standard rate + fees compared to St. Petersburg, Florida.'
@@ -9974,7 +9974,7 @@ var Citations = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: _Citations2.default.container },
+                { id: 'citations', className: _Citations2.default.container },
                 _react2.default.createElement(
                     'div',
                     { className: _Citations2.default.inner },
@@ -10066,34 +10066,35 @@ var Florida = function (_Component) {
                     'div',
                     { className: _Florida2.default.inner },
                     _react2.default.createElement(
-                        'div',
-                        { className: _Florida2.default.content },
-                        _assets.florida.map(function (_ref, i) {
-                            var number = _ref.number,
-                                blurb = _ref.blurb,
-                                heading = _ref.heading;
+                        'h2',
+                        { className: _Stats2.default.header },
+                        'How Gainesville compares to the rest of Florida'
+                    ),
+                    _assets.florida.map(function (_ref, i) {
+                        var number = _ref.number,
+                            blurb = _ref.blurb,
+                            heading = _ref.heading;
 
-                            return _react2.default.createElement(
+                        return _react2.default.createElement(
+                            'div',
+                            { key: i, className: _Stats2.default.stat },
+                            _react2.default.createElement(
                                 'div',
-                                { key: i, className: _Stats2.default.stat },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: _Florida2.default.heading },
-                                    heading
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: _Stats2.default.number },
-                                    number
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: _Stats2.default.blurb },
-                                    blurb
-                                )
-                            );
-                        })
-                    )
+                                { className: _Florida2.default.heading },
+                                heading
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: _Florida2.default.number },
+                                number
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: _Stats2.default.blurb },
+                                blurb
+                            )
+                        );
+                    })
                 )
             );
         }
@@ -10240,8 +10241,8 @@ var Petition = function (_Component) {
                             _react2.default.createElement(
                                 'div',
                                 { className: _Petition2.default.form__inner },
-                                _react2.default.createElement('input', { ref: 'fname', id: 'petition-first-name', name: 'first_name', className: _Petition2.default.input, type: 'text', placeholder: 'First name..' }),
-                                _react2.default.createElement('input', { ref: 'lname', id: 'petition-last-name', name: 'last_name', className: _Petition2.default.input, type: 'text', placeholder: 'Last name..' }),
+                                _react2.default.createElement('input', { ref: 'fname', id: 'petition-first-name', name: 'first_name', className: _Petition2.default.input__first_name, type: 'text', placeholder: 'First name..' }),
+                                _react2.default.createElement('input', { ref: 'lname', id: 'petition-last-name', name: 'last_name', className: _Petition2.default.input__last_name, type: 'text', placeholder: 'Last name..' }),
                                 _react2.default.createElement('input', { ref: 'email', id: 'petition-email', name: 'email', className: _Petition2.default.input, type: 'email', placeholder: 'email..' }),
                                 _react2.default.createElement('input', { ref: 'button', id: 'petition-button', name: 'sign', type: 'submit', className: _Petition2.default.button, value: 'Sign', disabled: true })
                             )
@@ -10425,7 +10426,7 @@ var Splash = function (_Component) {
                             _react2.default.createElement(
                                 'div',
                                 { className: _Splash2.default['logo-inner'] },
-                                _react2.default.createElement('img', { src: 'assets/logo.white.png' })
+                                _react2.default.createElement('img', { src: '/public/images/logo.white.png' })
                             )
                         )
                     ),
@@ -10584,7 +10585,7 @@ var TakeAction = function (_Component) {
     _createClass(TakeAction, [{
         key: 'render',
         value: function render() {
-            var link = 'mailto:' + _assets.take_action.address + '\n            ?bcc=' + _assets.take_action.bcc + '\n            &subject=' + encodeURI(_assets.take_action.subject) + '\n            &body=' + encodeURI(_assets.take_action.body);
+            var link = 'mailto:' + _assets.take_action.address + '?bcc=' + _assets.take_action.bcc + '&subject=' + encodeURI(_assets.take_action.subject) + '&body=' + encodeURI(_assets.take_action.body);
 
             return _react2.default.createElement(
                 'div',
@@ -10722,14 +10723,13 @@ exports = module.exports = __webpack_require__(14)();
 exports.i(__webpack_require__(32), undefined);
 
 // module
-exports.push([module.i, ".Florida__clearfix___RL_Se {\n  overflow: auto;\n  zoom: 1;\n}\n.Florida__container___1LTgX {\n  color: #474747;\n  background-size: cover;\n  padding: 70px 50px 85px 50px;\n  background-image: url('/assets/fl.jpg');\n}\n.Florida__inner___tZelC {\n  padding: 60px 15px 45px;\n  border-radius: 1px;\n  background: white;\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);\n}\n.Florida__content___1lZdk {\n  margin-bottom: 0;\n}\n.Florida__heading___3C5pG {\n  font-size: 1.2rem;\n  margin-bottom: 10px;\n}\n.Florida__number___1BnmA {\n  color: #333333;\n}\n", ""]);
+exports.push([module.i, ".Florida__clearfix___RL_Se {\n  overflow: auto;\n  zoom: 1;\n}\n.Florida__container___1LTgX {\n  color: #474747;\n  background-size: cover;\n  padding: 70px 50px 85px 50px;\n  background-image: url('/public/images/fl.jpg');\n}\n.Florida__inner___tZelC {\n  padding: 60px 15px 45px;\n  border-radius: 1px;\n  background: white;\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);\n}\n.Florida__heading___3C5pG {\n  font-size: 1.2rem;\n  margin-bottom: 10px;\n}\n.Florida__number___1BnmA {\n  color: #333333;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"clearfix": "Florida__clearfix___RL_Se",
 	"container": "Florida__container___1LTgX",
-	"inner": "Florida__inner___tZelC",
-	"content": "Florida__content___1lZdk " + __webpack_require__(32).locals["inner"] + "",
+	"inner": "Florida__inner___tZelC " + __webpack_require__(32).locals["inner"] + "",
 	"heading": "Florida__heading___3C5pG",
 	"number": "Florida__number___1BnmA " + __webpack_require__(32).locals["number"] + ""
 };
@@ -10743,7 +10743,7 @@ exports = module.exports = __webpack_require__(14)();
 exports.i(__webpack_require__(25), undefined);
 
 // module
-exports.push([module.i, ".Petition__clearfix___2pN-J {\n  overflow: auto;\n  zoom: 1;\n}\n.Petition__main___p4-9q {\n  position: relative;\n  padding: 90px 15px 0;\n}\n.Petition__container___13Yu7 {\n  margin: 0 auto;\n  max-width: 840px;\n  text-align: center;\n}\n.Petition__copy___17hPM {\n  text-align: left;\n  line-height: 1.5rem;\n}\n.Petition__copy__container___1O3Y0 {\n  background: #f8fafc;\n  padding: 15px;\n  color: black;\n}\n.Petition__petition___YBUb8 {\n  padding: 15px;\n}\n.Petition__header___3z_Zz {\n  margin-bottom: 25px;\n  color: white;\n  font-weight: normal;\n  font-size: 2rem;\n}\n.Petition__tagline___1rYB0 {\n  text-align: center;\n  color: #f8fafc;\n  max-width: 580px;\n  margin: 0 auto 45px auto;\n}\n.Petition__form___2H3bn {\n  display: inline-block;\n  max-width: 415px;\n}\n.Petition__form__inner___1WZ4U {\n  overflow: auto;\n  width: 100%;\n}\n.Petition__input___M17XT {\n  max-width: 300px;\n  width: 100%;\n  line-height: 2rem;\n  padding: 0 10px;\n  margin-right: 25px;\n  margin-top: 30px;\n  float: left;\n  @color _primary;\n  font-size: 1rem;\n  border: 1px solid gray;\n}\n.Petition__input___M17XT#Petition__petition-last-name___3hmmA {\n  margin-right: 0;\n  max-width: 194px;\n}\n.Petition__input___M17XT#Petition__petition-first-name___2i8L6 {\n  max-width: 194px;\n}\n.Petition__button___2EwYy {\n  float: left;\n  background: #f8fafc;\n  margin-top: 30px;\n}\n.Petition__disclaimer___1oOmX {\n  font-size: 0.7rem;\n  color: gray;\n}\n", ""]);
+exports.push([module.i, ".Petition__clearfix___2pN-J {\n  overflow: auto;\n  zoom: 1;\n}\n.Petition__main___p4-9q {\n  position: relative;\n  padding: 90px 15px 0;\n}\n.Petition__container___13Yu7 {\n  margin: 0 auto;\n  max-width: 840px;\n  text-align: center;\n}\n.Petition__copy___17hPM {\n  text-align: left;\n  line-height: 1.5rem;\n}\n.Petition__copy__container___1O3Y0 {\n  background: #f8fafc;\n  padding: 15px;\n  color: black;\n}\n.Petition__petition___YBUb8 {\n  padding: 15px;\n}\n.Petition__header___3z_Zz {\n  margin-bottom: 25px;\n  color: white;\n  font-weight: normal;\n  font-size: 2rem;\n}\n.Petition__tagline___1rYB0 {\n  text-align: center;\n  color: #f8fafc;\n  max-width: 580px;\n  margin: 0 auto 45px auto;\n}\n.Petition__form___2H3bn {\n  display: inline-block;\n  max-width: 415px;\n  margin-bottom: 15px;\n}\n.Petition__form__inner___1WZ4U {\n  overflow: auto;\n  width: 100%;\n}\n.Petition__input___M17XT {\n  max-width: 300px;\n  width: 100%;\n  line-height: 2rem;\n  padding: 0 10px;\n  margin-right: 25px;\n  margin-top: 30px;\n  float: left;\n  @color _primary;\n  font-size: 1rem;\n  border: 1px solid gray;\n}\n.Petition__input__first_name___3kL83 {\n  max-width: 194px;\n}\n.Petition__input__last_name___F95do {\n  margin-right: 0;\n  max-width: 194px;\n}\n.Petition__button___2EwYy {\n  float: left;\n  background: #f8fafc;\n  margin-top: 30px;\n}\n.Petition__disclaimer___1oOmX {\n  font-size: 0.7rem;\n  color: gray;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -10758,8 +10758,8 @@ exports.locals = {
 	"form": "Petition__form___2H3bn",
 	"form__inner": "Petition__form__inner___1WZ4U",
 	"input": "Petition__input___M17XT",
-	"petition-last-name": "Petition__petition-last-name___3hmmA",
-	"petition-first-name": "Petition__petition-first-name___2i8L6",
+	"input__first_name": "Petition__input__first_name___3kL83 Petition__input___M17XT",
+	"input__last_name": "Petition__input__last_name___F95do Petition__input___M17XT",
 	"button": "Petition__button___2EwYy " + __webpack_require__(25).locals["button"] + "",
 	"disclaimer": "Petition__disclaimer___1oOmX"
 };
@@ -10773,7 +10773,7 @@ exports = module.exports = __webpack_require__(14)();
 
 
 // module
-exports.push([module.i, ".Socials__clearfix___3A5kT {\n  overflow: auto;\n  zoom: 1;\n}\n.Socials__container___qKZNU {\n  padding: 60px 15px 90px 15px;\n  background: #f8fafc;\n  text-align: center;\n  border-top: 1px solid #595959;\n}\n.Socials__copy___MhAtt {\n  font-size: 2rem;\n}\n.Socials__icons___1HmW9 {\n  display: inline-block;\n  margin-top: 30px;\n}\n.Socials__anchor___297j5 {\n  display: inline-block;\n  margin: 0 15px;\n}\n.Socials__icon___2xhYh {\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  color: #f8fafc;\n  font-size: 35px;\n}\n.Socials__email___AXTqY,\n.Socials__twitter___2Xemb,\n.Socials__facebook___3xObe,\n.Socials__github___Nadqk {\n}\n.Socials__email___AXTqY {\n  background: #d14836;\n}\n.Socials__twitter___2Xemb {\n  background: #00aced;\n}\n.Socials__facebook___3xObe {\n  background: #3b5998;\n}\n.Socials__github___Nadqk {\n  background: #767676;\n}\n.Socials__i___10CXt:before {\n  line-height: 60px;\n}\n", ""]);
+exports.push([module.i, ".Socials__clearfix___3A5kT {\n  overflow: auto;\n  zoom: 1;\n}\n.Socials__container___qKZNU {\n  padding: 60px 15px 90px 15px;\n  background: #f8fafc;\n  text-align: center;\n  border-top: 1px solid #595959;\n}\n.Socials__copy___MhAtt {\n  font-size: 2rem;\n}\n.Socials__icons___1HmW9 {\n  display: inline-block;\n  margin-top: 30px;\n}\n.Socials__anchor___297j5 {\n  display: inline-block;\n  margin: 0 17px;\n}\n.Socials__icon___2xhYh {\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  color: #f8fafc;\n  font-size: 35px;\n}\n.Socials__email___AXTqY,\n.Socials__twitter___2Xemb,\n.Socials__facebook___3xObe,\n.Socials__github___Nadqk {\n}\n.Socials__email___AXTqY {\n  background: #d14836;\n}\n.Socials__twitter___2Xemb {\n  background: #00aced;\n}\n.Socials__facebook___3xObe {\n  background: #3b5998;\n}\n.Socials__github___Nadqk {\n  background: #767676;\n}\n.Socials__i___10CXt:before {\n  line-height: 60px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -10799,7 +10799,7 @@ exports = module.exports = __webpack_require__(14)();
 
 
 // module
-exports.push([module.i, ".Splash__clearfix___1v9PW {\n  overflow: auto;\n  zoom: 1;\n}\n.Splash__splash___1kvKX {\n  position: relative;\n  background-image: url('/assets/splash.jpg');\n  background-size: cover;\n  padding: 120px 15px;\n}\n.Splash__splash___1kvKX:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 0;\n  opacity: 0.8;\n  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);\n  /* FF3.6-15 */\n  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);\n  /* Chrome10-25,Safari5.1-6 */\n  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);\n}\n.Splash__logo-container___3mE01 {\n  position: relative;\n  max-width: 400px;\n  margin: 0 auto;\n}\n.Splash__logo-content___rH5ZL {\n  width: 100%;\n  padding-bottom: 100%;\n  border: 3px solid #f8fafc;\n  border-radius: 50%;\n  background: #2D6287;\n}\n.Splash__logo___tiB12 {\n  text-align: center;\n  position: absolute;\n  top: 0;\n  left: -18px;\n  right: 0;\n  bottom: 0;\n}\n.Splash__logo___tiB12:before {\n  content: ' ';\n  display: inline-block;\n  height: 100%;\n  vertical-align: middle;\n}\n.Splash__logo-inner___2ya7V {\n  display: inline-block;\n  vertical-align: middle;\n}\n.Splash__logo-inner___2ya7V img {\n  max-width: 200px;\n  width: 100%;\n}\n.Splash__copy___1O8u3 {\n  position: absolute;\n  bottom: -50px;\n  left: 0;\n  right: 0;\n  margin: 0 auto;\n  text-align: center;\n  font-family: Vollkorn;\n  font-weight: bold;\n  color: white;\n}\n.Splash__copy-container___2rY2i {\n  display: inline-block;\n  text-align: left;\n  text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);\n}\n.Splash__copy-1___1E5aI {\n  font-size: 2rem;\n  line-height: 0;\n}\n.Splash__copy-2___2bXUi {\n  font-size: 4.2rem;\n}\n", ""]);
+exports.push([module.i, ".Splash__clearfix___1v9PW {\n  overflow: auto;\n  zoom: 1;\n}\n.Splash__splash___1kvKX {\n  position: relative;\n  background-image: url('/public/images/splash.jpg');\n  background-size: cover;\n  padding: 120px 15px;\n}\n.Splash__splash___1kvKX:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 0;\n  opacity: 0.8;\n  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);\n  /* FF3.6-15 */\n  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);\n  /* Chrome10-25,Safari5.1-6 */\n  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);\n}\n.Splash__logo-container___3mE01 {\n  position: relative;\n  max-width: 400px;\n  margin: 0 auto;\n}\n.Splash__logo-content___rH5ZL {\n  width: 100%;\n  padding-bottom: 100%;\n  border: 3px solid #f8fafc;\n  border-radius: 50%;\n  background: #2D6287;\n}\n.Splash__logo___tiB12 {\n  text-align: center;\n  position: absolute;\n  top: 4px;\n  left: -14px;\n  right: 0;\n  bottom: 0;\n}\n.Splash__logo___tiB12:before {\n  content: ' ';\n  display: inline-block;\n  height: 100%;\n  vertical-align: middle;\n}\n.Splash__logo-inner___2ya7V {\n  display: inline-block;\n  vertical-align: middle;\n}\n.Splash__logo-inner___2ya7V img {\n  max-width: 200px;\n  width: 100%;\n}\n.Splash__copy___1O8u3 {\n  position: absolute;\n  bottom: -50px;\n  left: 0;\n  right: 0;\n  margin: 0 auto;\n  text-align: center;\n  font-family: Vollkorn;\n  font-weight: bold;\n  color: white;\n}\n.Splash__copy-container___2rY2i {\n  display: inline-block;\n  text-align: left;\n  text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);\n}\n.Splash__copy-1___1E5aI {\n  font-size: 2rem;\n  line-height: 0;\n}\n.Splash__copy-2___2bXUi {\n  font-size: 4.2rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -10824,7 +10824,7 @@ exports = module.exports = __webpack_require__(14)();
 exports.i(__webpack_require__(25), undefined);
 
 // module
-exports.push([module.i, ".TakeAction__clearfix___3_1Im {\n  overflow: auto;\n  zoom: 1;\n}\n.TakeAction__copy___1ZnHY {\n  font-size: 1rem;\n  margin: 0 auto;\n  max-width: 1200px;\n  line-height: 1.7rem;\n  padding: 0 40px;\n}\n.TakeAction__container___25CeK {\n  text-align: center;\n  padding: 60px 15px;\n  background: #e6e6e6;\n  border-top: 1px solid gray;\n  border-bottom: 1px solid gray;\n}\n.TakeAction__button___S5EmF {\n  display: inline-block;\n  margin-top: 30px;\n  padding: 10px 20px;\n  background: #8D79C1;\n  color: white;\n  font-size: 1.5rem;\n  border-color: rgba(0, 0, 0, 0.2);\n}\n.TakeAction__button___S5EmF:hover {\n  color: white;\n}\n", ""]);
+exports.push([module.i, ".TakeAction__clearfix___3_1Im {\n  overflow: auto;\n  zoom: 1;\n}\n.TakeAction__copy___1ZnHY {\n  font-size: 1.2rem;\n  margin: 0 auto;\n  max-width: 1200px;\n  line-height: 1.7rem;\n  padding: 0 40px;\n}\n.TakeAction__container___25CeK {\n  text-align: center;\n  padding: 60px 15px;\n  background: #e6e6e6;\n  border-top: 1px solid gray;\n  border-bottom: 1px solid gray;\n}\n.TakeAction__button___S5EmF {\n  display: inline-block;\n  margin-top: 30px;\n  padding: 10px 20px;\n  background: #8D79C1;\n  color: white;\n  font-size: 1.5rem;\n  border-color: rgba(0, 0, 0, 0.2);\n}\n.TakeAction__button___S5EmF:hover {\n  color: white;\n}\n", ""]);
 
 // exports
 exports.locals = {
