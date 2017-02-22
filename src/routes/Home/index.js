@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import styles from './Home.less'
 import Splash from './components/Splash'
+import Stats from './components/Stats'
 
 class Home extends Component {
     render() {
-        return <Splash/>
+        return <div>
+            <Splash/>
+            <Stats/>
+        </div>
     }
 }
 
