@@ -1,0 +1,32 @@
+@import "../../../variables.less";
+
+.copy {
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  line-height: 1.7rem;
+  padding: 0 40px;
+}
+
+.container {
+  text-align: center;
+  padding: 60px @sectionPadding;
+  background: @color_gray_lite;
+  border-top: 1px solid @color_gray;
+  border-bottom: 1px solid @color_gray;
+}
+
+.button {
+  composes: button from '../../../general.less';
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: @color_secondary;
+  color: white;
+  font-size: 1.5rem;
+  border-color: rgba(0,0,0,0.2);
+
+  &:hover {
+    color: white;
+  }
+}
