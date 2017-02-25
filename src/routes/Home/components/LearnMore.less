@@ -1,0 +1,55 @@
+@import "../../../variables.less";
+
+.container {
+  composes: section from '../../../components/Section.less';
+  padding-bottom: 45px;
+}
+
+.inner {
+  composes: inner from '../../../components/Section.less';
+}
+
+.header {
+  composes: header from '../../../components/Section.less';
+  margin-bottom: 40px;
+}
+
+.heading {
+  composes: heading from '../../../components/Columns.less';
+}
+
+.link {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid @color_gray_lite;
+  border-radius: 1px;
+  font-size: 1rem;
+  color: @color_gray_dark_lite;
+  text-decoration: none;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    top: -1px;
+    text-decoration: none;
+    color: @color_black_lite;
+    //border-color: @color_gray;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+    cursor: pointer;
+  }
+}
+
+.item {
+  composes: column from '../../../components/Columns.less';
+  padding: 0 20px;
+}
+
+.blurb {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  text-align: left;
+  margin-bottom: 15px;
+}
+

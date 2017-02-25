@@ -5,9 +5,7 @@
 }
 
 .inner {
-  margin: 0 auto 30px;
-  max-width: 1200px;
-  text-align: center;
+  composes: inner from '../../../components/Section.less';
 }
 
 .header {
@@ -17,12 +15,7 @@
 }
 
 .stat {
-  display: inline-block;
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 50px;
-  padding: 0 15px;
-  vertical-align: top;
+  composes: column from '../../../components/Columns.less';
 }
 
 .number {

@@ -9,7 +9,7 @@
 }
 
 .inner {
-  composes: inner from './Stats.less';
+  composes: inner from '../../../components/Section.less';
   padding: 60px @sectionPadding 45px;
   border-radius: 1px;
   background: white;
@@ -17,8 +17,7 @@
 }
 
 .heading {
-  font-size: 1.2rem;
-  margin-bottom: 10px
+  composes: heading from '../../../components/Columns.less';
 }
 
 .number {

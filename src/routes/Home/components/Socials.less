@@ -1,14 +1,13 @@
 @import "../../../variables.less";
 
 .container {
-  padding: 60px @sectionPadding 90px @sectionPadding;
+  composes: section from '../../../components/Section.less';
   background: @color_white;
-  text-align: center;
-  border-top: 1px solid @color_gray_dark;
+  border-top: 1px solid @color_gray_sku_lite;
 }
 
 .copy {
-  font-size: 2rem;
+  composes: header from '../../../components/Section.less';
 }
 
 .icons {
