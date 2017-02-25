@@ -11300,7 +11300,7 @@ exports = module.exports = __webpack_require__(7)();
 exports.i(__webpack_require__(34), undefined);
 
 // module
-exports.push([module.i, ".Splash__clearfix___3RznW {\n  overflow: auto;\n  zoom: 1;\n}\n.Splash__splash___2d5bA {\n  background-image: url('/public/images/splash.jpg');\n  padding: 60px 15px;\n}\n", ""]);
+exports.push([module.i, ".Splash__clearfix___3RznW {\n  overflow: auto;\n  zoom: 1;\n}\n.Splash__splash___2d5bA {\n  background-image: url('/public/images/splash.learn.jpg');\n  background-position: center 85%;\n  padding: 60px 15px;\n  color: #557084;\n}\n.Splash__splash___2d5bA:before {\n  opacity: 0.6;\n}\n", ""]);
 
 // exports
 exports.locals = {
