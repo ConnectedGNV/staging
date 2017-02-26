@@ -48,13 +48,6 @@ export const press = [
         ]
     },
 ]
-    //tv spots
-
-    //articles
-
-    //posts from reddit and facebook
-
-
 
 
 export const resources = [
