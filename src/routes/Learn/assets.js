@@ -72,7 +72,7 @@ export const resources = [
         link: 'http://www.tn4fiber.org/benefits/',
     },
     {
-        title: 'San Francisco City Dig Once Ordinance',
+        title: 'San Francisco Dig Once City Ordinance',
         subtitle: 'City of San Francisco, 10/28/14',
         link: 'https://sfgov.legistar.com/View.ashx?M=F&ID=3319457&GUID=F4269889-DA96-4993-B243-AA71125C3847',
     },

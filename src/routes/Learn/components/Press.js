@@ -11,11 +11,13 @@ class Resources extends Component {
                     <h2 className={css.header}>Press</h2>
                 </div>
             </div>
-            {press.map((list, i) => <ArticleList
-                key={i}
-                className={css.article_list}
-                {...list}
-            />)}
+            <div>
+                {press.map((list, i) => <ArticleList
+                    key={i}
+                    className={css.article_list}
+                    {...list}
+                />)}
+            </div>
         </div>
     }
 }

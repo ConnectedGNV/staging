@@ -3890,7 +3890,7 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, ".ArticleList__clearfix___iUJi1 {\n  overflow: auto;\n  zoom: 1;\n}\n.ArticleList__container___3rUZI {\n  padding: 60px 15px 60px 15px;\n  background: #457699;\n  color: white;\n}\n.ArticleList__container___3rUZI a {\n  color: inherit;\n}\n.ArticleList__inner___dkAPv {\n  margin: 0 auto;\n  max-width: 900px;\n}\n.ArticleList__heading___1Hpq4 {\n  font-size: 2rem;\n  margin-bottom: 30px;\n}\n.ArticleList__chain___1UcEx {\n  opacity: 0.45;\n  transition: opacity 100ms ease-in-out;\n}\n.ArticleList__chain___1UcEx:hover {\n  opacity: 1;\n}\n.ArticleList__chain___1UcEx i {\n  margin-left: 15px;\n  position: relative;\n  top: 0.1rem;\n  font-size: 1.8rem;\n}\n.ArticleList__chain___1UcEx i:before {\n  transform: rotate(-45deg);\n}\n.ArticleList__item___2yFGs {\n  margin-bottom: 50px;\n}\n.ArticleList__title___2zt2N {\n  margin: 0;\n  font-size: 1.2rem;\n  font-weight: normal;\n}\n.ArticleList__subtitle___17jJD {\n  font-size: 0.9rem;\n  opacity: 0.6;\n  margin-top: 10px;\n}\n.ArticleList__link___mYEuP {\n  display: inline-block;\n  margin-top: 10px;\n  font-size: 0.8rem;\n  letter-spacing: 0.03rem;\n  word-wrap: break-word;\n}\n", ""]);
+exports.push([module.i, ".ArticleList__clearfix___iUJi1 {\n  overflow: auto;\n  zoom: 1;\n}\n.ArticleList__container___3rUZI {\n  padding: 60px 15px 50px 15px;\n  background: #457699;\n  color: white;\n}\n.ArticleList__container___3rUZI a {\n  color: inherit;\n}\n.ArticleList__inner___dkAPv {\n  margin: 0 auto;\n  max-width: 900px;\n}\n.ArticleList__heading___1Hpq4 {\n  font-size: 2rem;\n  margin-bottom: 30px;\n}\n.ArticleList__chain___1UcEx {\n  opacity: 0.45;\n  transition: opacity 100ms ease-in-out;\n}\n.ArticleList__chain___1UcEx:hover {\n  opacity: 1;\n}\n.ArticleList__chain___1UcEx i {\n  margin-left: 15px;\n  position: relative;\n  top: 0.1rem;\n  font-size: 1.8rem;\n}\n.ArticleList__chain___1UcEx i:before {\n  transform: rotate(-45deg);\n}\n.ArticleList__item___2yFGs {\n  margin-bottom: 50px;\n}\n.ArticleList__title___2zt2N {\n  margin: 0;\n  font-size: 1.2rem;\n  font-weight: normal;\n}\n.ArticleList__subtitle___17jJD {\n  font-size: 0.9rem;\n  opacity: 0.6;\n  margin-top: 10px;\n}\n.ArticleList__link___mYEuP {\n  display: inline-block;\n  margin-top: 10px;\n  font-size: 0.8rem;\n  letter-spacing: 0.03rem;\n  word-wrap: break-word;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -7597,7 +7597,7 @@ var resources = exports.resources = [{
     subtitle: 'TN4Fiber.org',
     link: 'http://www.tn4fiber.org/benefits/'
 }, {
-    title: 'San Francisco City Dig Once Ordinance',
+    title: 'San Francisco Dig Once City Ordinance',
     subtitle: 'City of San Francisco, 10/28/14',
     link: 'https://sfgov.legistar.com/View.ashx?M=F&ID=3319457&GUID=F4269889-DA96-4993-B243-AA71125C3847'
 }, {
@@ -11360,12 +11360,16 @@ var Resources = function (_Component) {
                         )
                     )
                 ),
-                _assets.press.map(function (list, i) {
-                    return _react2.default.createElement(_ArticleList2.default, _extends({
-                        key: i,
-                        className: _Press2.default.article_list
-                    }, list));
-                })
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _assets.press.map(function (list, i) {
+                        return _react2.default.createElement(_ArticleList2.default, _extends({
+                            key: i,
+                            className: _Press2.default.article_list
+                        }, list));
+                    })
+                )
             );
         }
     }]);
@@ -11775,7 +11779,7 @@ exports.i(__webpack_require__(24), undefined);
 exports.i(__webpack_require__(35), undefined);
 
 // module
-exports.push([module.i, ".Press__clearfix___22nPL {\n  overflow: auto;\n  zoom: 1;\n}\n.Press__header___1Q06f {\n  position: relative;\n  font-size: 3rem;\n  font-weight: normal;\n  margin: 0;\n  padding: 115px 0 30px;\n  color: white;\n}\n.Press__splash___1OQ2q {\n  background-image: url('/public/images/splash.press.jpg');\n  padding: 0;\n  background-position: center;\n}\n.Press__splash___1OQ2q:before {\n  opacity: 0.5;\n}\n.Press__inner___FADrc {\n}\n.Press__article_list___2JRLc {\n}\n", ""]);
+exports.push([module.i, ".Press__clearfix___22nPL {\n  overflow: auto;\n  zoom: 1;\n}\n.Press__header___1Q06f {\n  position: relative;\n  font-size: 3rem;\n  font-weight: normal;\n  margin: 0;\n  padding: 115px 0 30px;\n  color: white;\n}\n.Press__splash___1OQ2q {\n  background-image: url('/public/images/splash.press.jpg');\n  padding: 0;\n  background-position: center;\n}\n.Press__splash___1OQ2q:before {\n  opacity: 0.5;\n}\n.Press__inner___FADrc {\n}\n.Press__article_list___2JRLc {\n}\n.Press__article_list___2JRLc:first-child {\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n}\n", ""]);
 
 // exports
 exports.locals = {
