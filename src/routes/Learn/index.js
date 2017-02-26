@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Logo from '../../components/Logo'
-import Nav from '../../components/Nav'
-
-import css from './components/Splash.less'
+import Splash from './components/Splash'
+import Resources from './components/Resources'
+import Press from './components/Press'
 
 class Learn extends Component {
     render() {
-        return <div className={css.splash}>
-            <Logo mode="medium"/>
-            <Nav />
+        return <div>
+            <Splash />
+            <Resources />
+            <Press />
         </div>
     }
 }

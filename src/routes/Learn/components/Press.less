@@ -1,0 +1,26 @@
+@import "../../../variables.less";
+
+.header {
+  position: relative;
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 100px 0 30px;
+  color: white;
+}
+
+.splash {
+  composes: splash from '../../../components/Splash.less';
+  background-image: url('/public/images/splash.press.jpg');
+  padding: 0;
+  background-position: center;
+
+  &:before {
+    opacity: 0.5;
+  }
+
+}
+
+.inner {
+  composes: inner from '../../../components/ArticleList.less';
+}
