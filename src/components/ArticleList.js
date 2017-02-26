@@ -2,16 +2,28 @@ import React, { Component } from 'react';
 import css from './ArticleList.less'
 
 class ArticleList extends Component {
-    render() {
-        const { items, heading, id } = this.props
 
-        return <div id={id} className={css.container}>
+    static defaultProps = {
+        className: css.container
+    }
+
+    render() {
+        const { items, heading, id, className } = this.props
+
+        return <div id={id} className={className}>
             <div className={css.inner}>
-                <div className={css.heading}>{heading}</div>
+                <div className={css.heading}>
+                    {heading}
+                    <a className={css.chain} href={`#${id}`}>
+                        <i className='ion-link' />
+                    </a>
+                </div>
                 {items.map(({ link, title }, i) => {
                     return <div key={i} className={css.item}>
                         <div className={css.title}>{title}</div>
-                        <a href={link} className={css.link}>{link}</a>
+                        <div>
+                            <a href={link} className={css.link}>{link}</a>
+                        </div>
                     </div>
                 })}
 

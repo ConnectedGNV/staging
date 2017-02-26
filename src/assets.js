@@ -1,15 +1,15 @@
 export const nav = [
+    // {
+    //     label: 'Learn More',
+    //     link: '/learn/',
+    // },
     {
-        label: 'Learn More',
-        link: '/learn/',
+        label: 'Home',
+        link: '/',
     },
-    {
-        label: 'About',
-        link: '/about/',
-    },
-    {
-        label: 'Blog',
-        link: '/blog/',
-    },
+    // {
+    //     label: 'Blog',
+    //     link: '/blog/',
+    // },
 
 ]

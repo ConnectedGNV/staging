@@ -13,6 +13,7 @@ class Resources extends Component {
             </div>
             {press.map((list, i) => <ArticleList
                 key={i}
+                className={css.article_list}
                 {...list}
             />)}
         </div>
