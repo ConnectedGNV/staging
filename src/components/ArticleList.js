@@ -18,9 +18,10 @@ class ArticleList extends Component {
                         <i className='ion-link' />
                     </a>
                 </div>
-                {items.map(({ link, title }, i) => {
+                {items.map(({ link, title, subtitle }, i) => {
                     return <div key={i} className={css.item}>
-                        <div className={css.title}>{title}</div>
+                        <h3 className={css.title}>{title}</h3>
+                        {subtitle && <div className={css.subtitle}>{subtitle}</div>}
                         <div>
                             <a href={link} className={css.link}>{link}</a>
                         </div>
