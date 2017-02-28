@@ -5,12 +5,12 @@ export const learn_more = [
         label: 'White Paper',
         blurb: 'A fact sheet introducing the topic of internet access in Gainesville, demonstrating our issues with internet quality, and establishing the goals of Connected Gainesville.',
     },
-    {
-        id: 'history',
-        link: '/public/Gainesville_Utility_History.pdf',
-        label: 'History',
-        blurb: 'Learn the history of Gainesville\'s utilities and discover how our community won its right to clean water and access to power.',
-    },
+    // {
+    //     id: 'history',
+    //     link: '/public/Gainesville_Utility_History.pdf',
+    //     label: 'History',
+    //     blurb: 'Learn the history of Gainesville\'s utilities and discover how our community won its right to clean water and access to power.',
+    // },
     {
         id: 'resources',
         link: '/learn#resources',
