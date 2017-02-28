@@ -1,6 +1,3 @@
-<script src="/public/dist/bundle.js?{{site.time | date: '%s%N'}}"></script>
-
-
 <div id="post-html" style="display: none">
 
 {% for post in site.posts limit:5 %}
@@ -14,12 +11,26 @@
 <script>
 window.posts = [
 {% for post in site.posts limit:5 %}
-{
-    title: "{{ post.title }}",
-    date: "{{ post.date | date: "%b %-d, %Y" }}",
-    username: "{{ post.username }}",
-    url: "{{ post.url | prepend: site.url }}"
-},
+    {
+        title: "{{ post.title }}",
+        date: "{{ post.date | date: "%b %-d, %Y" }}",
+        username: "{{ post.username }}",
+        url: "{{ post.url | prepend: site.url }}"
+    },
 {% endfor %}
 ]
+
+{% for post in site.posts %}
+
+    {% if post.title == page.title %}
+
+window.postIndex = {{forloop.index0}}
+
+    {% endif %}
+
+{% endfor %}
+
+console.log('buttss')
 </script>
+
+<script src="/public/dist/bundle.js?{{site.time | date: '%s%N'}}"></script>
