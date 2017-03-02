@@ -1,28 +1,18 @@
 import React, { Component } from 'react';
 import css from './Blog.less'
 
+import Post from './Post'
+import Splash from './Splash'
+
 class Blog extends Component {
 
     render() {
 
-        const { postIndex } = window
-        const { posts } = this.props
-        const post = posts.find((post, i) => postIndex === i)
-        const { url, title, username, date, content } = post
-
-        const html = {
-            __html: content
-        }
+        const {posts} = this.props
 
         return <div className={css.container}>
-            <h2 className={css.heading}>
-                <a className={css.link} href={url}>{title}</a>
-            </h2>
-            <div className={css.meta}>
-                <span className={css.author}>{username}</span>
-                <span className={css.date}>{date}</span>
-            </div>
-            <div className={css.excerpt} dangerouslySetInnerHTML={html}></div>
+            <Splash />
+            <Post posts={posts}/>
         </div>
     }
 }
