@@ -19,15 +19,22 @@ class App extends Component {
                 Route = Learn
             break;
             default:
-                Route = Home    
+                Route = Home
         }
 
         if (postIndex || postIndex === 0) {
             Route = Blog
         }
 
+        let posts = window.posts
 
-        return <Route />
+        posts.map((post, i) => {
+            const postHTML = document.getElementById(`_post_${i}`)
+            post.content = postHTML.getElementsByClassName('_post.content')[0].outerHTML
+            post.excerpt = postHTML.getElementsByClassName('_post.excerpt')[0].outerHTML
+        })
+
+        return <Route {...{posts}}/>
     }
 }
 

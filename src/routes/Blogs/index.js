@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Item from './components/Item'
+
 class Blogs extends Component {
 
 
@@ -11,13 +13,12 @@ class Blogs extends Component {
 
     render() {
 
-        const { posts, postIndex } = window
+        const { postIndex } = window
+        const { posts } = this.props
 
 
         return <div>
-            {posts.map((post) => {
-                return <div key={i}>{post.title}</div>
-            })}
+            {posts.map((post, i) => <Item key={i} post={post}/>)}
         </div>
     }
 }

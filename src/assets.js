@@ -7,9 +7,9 @@ export const nav = [
         label: 'Home',
         link: '/',
     },
-    // {
-    //     label: 'Blog',
-    //     link: '/blog/',
-    // },
+    {
+        label: 'Blog',
+        link: '/blog/',
+    },
 
 ]

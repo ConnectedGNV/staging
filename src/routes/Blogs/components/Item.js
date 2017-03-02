@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import css from './Blog.less'
 
-class Blog extends Component {
+import css from './Item.less'
+
+class Item extends Component {
 
     render() {
 
-        const { postIndex } = window
-        const { posts } = this.props
-        const post = posts.find((post, i) => postIndex === i)
-        const { url, title, username, date, content } = post
+        const { post } = this.props
+        const { url, title, username, date, excerpt } = post
 
         const html = {
-            __html: content
+            __html: excerpt
         }
 
         return <div className={css.container}>
@@ -27,4 +26,4 @@ class Blog extends Component {
     }
 }
 
-export default Blog
+export default Item
