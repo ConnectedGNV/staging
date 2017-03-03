@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Item from './components/Item'
 import Posts from './components/Posts'
-import Splash from './components/Splash'
+import MediumSplash from '../../components/MediumSplash'
 import Socials from '../../components/Socials'
 
 class Blogs extends Component {
@@ -11,7 +11,7 @@ class Blogs extends Component {
         const { posts } = this.props
 
         return <div>
-            <Splash />
+            <MediumSplash />
             <Posts posts={posts}/>
             <Socials />
         </div>

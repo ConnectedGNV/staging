@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Post from './components/Post'
-import Splash from './components/Splash'
+import MediumSplash from '../../components/MediumSplash'
 import Socials from '../../components/Socials'
 
 class Blog extends Component {
@@ -11,7 +11,7 @@ class Blog extends Component {
         const {posts} = this.props
 
         return <div>
-            <Splash />
+            <MediumSplash />
             <Post posts={posts}/>
             <Socials />
         </div>
