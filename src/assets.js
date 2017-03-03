@@ -1,8 +1,8 @@
 export const nav = [
-    // {
-    //     label: 'Learn More',
-    //     link: '/learn/',
-    // },
+    {
+        label: 'Learn More',
+        link: '/learn/',
+    },
     {
         label: 'Home',
         link: '/',
