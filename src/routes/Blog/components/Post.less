@@ -1,0 +1,53 @@
+.container {
+  composes: section from '../../../components/Section.less';
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  h1, h2, h3, h4, h5, h6 {
+
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.inner {
+  composes: inner from '../../../components/Section.less';
+  text-align: left;
+  max-width: 900px;
+}
+
+.content {
+  margin-top: 30px;
+  line-height: 1.5rem;
+}
+
+.link {
+  composes: link from '../../../components/Blog.less';
+}
+
+.heading {
+  composes: heading from '../../../components/Blog.less';
+}
+
+.meta {
+  composes: meta from '../../../components/Blog.less';
+}
+
+.author {
+  composes: author from '../../../components/Blog.less';
+}
+
+.date {
+  composes: date from '../../../components/Blog.less';
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

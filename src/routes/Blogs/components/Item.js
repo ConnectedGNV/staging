@@ -18,10 +18,15 @@ class Item extends Component {
                 <a className={css.link} href={url}>{title}</a>
             </h2>
             <div className={css.meta}>
-                <span className={css.author}>{username}</span>
+                By <span className={css.author}>{username}</span>,
                 <span className={css.date}>{date}</span>
             </div>
             <div className={css.excerpt} dangerouslySetInnerHTML={html}></div>
+            <span>...</span>
+
+            <div className={css.divider}>
+                <div className={css.shape}></div>
+            </div>
         </div>
     }
 }

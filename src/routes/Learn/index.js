@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Splash from '../Blog/Splash'
+import Splash from '../Blog/components/Splash'
 import Resources from './components/Resources'
 import Press from './components/Press'
 import LearnMore from '../../components/LearnMore'

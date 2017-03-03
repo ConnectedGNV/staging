@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
 
 import Item from './components/Item'
+import Posts from './components/Posts'
+import Splash from './components/Splash'
+import Socials from '../../components/Socials'
 
 class Blogs extends Component {
 
-
-    constructor(props) {
-        super(props)
-
-
-    }
-
     render() {
-
-        const { postIndex } = window
         const { posts } = this.props
 
-
         return <div>
-            {posts.map((post, i) => <Item key={i} post={post}/>)}
+            <Splash />
+            <Posts posts={posts}/>
+            <Socials />
         </div>
     }
 }

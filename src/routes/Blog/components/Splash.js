@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Logo from '../../components/Logo'
-import Nav from '../../components/Nav'
+import Logo from '../../../components/Logo'
+import Nav from '../../../components/Nav'
 
 import css from './Splash.less'
 

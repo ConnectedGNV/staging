@@ -1,0 +1,19 @@
+.container {
+    composes: section from '../../../components/Section.less';
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.inner {
+    composes: inner from '../../../components/Section.less';
+    text-align: left;
+    max-width: 900px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

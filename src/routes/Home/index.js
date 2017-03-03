@@ -4,7 +4,7 @@ import Stats from './components/Stats'
 import TakeAction from './components/TakeAction'
 import LearnMore from '../../components/LearnMore'
 import Florida from './components/Florida'
-import Socials from './components/Socials'
+import Socials from '../../components/Socials'
 import Citations from './components/Citations'
 
 class Home extends Component {

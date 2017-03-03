@@ -1,0 +1,14 @@
+@import "../../../variables.less";
+
+.splash {
+  composes: splash from '../../../components/Splash.less';
+  background-image: url('/public/images/splash.blog.jpg');
+  background-position: center 85%;
+  padding: 60px @sectionPadding;
+
+  &:before {
+    opacity: 0.6;
+  }
+
+  color: #557084;
+}

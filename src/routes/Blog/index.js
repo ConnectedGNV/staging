@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import css from './Blog.less'
 
-import Post from './Post'
-import Splash from './Splash'
+import Post from './components/Post'
+import Splash from './components/Splash'
+import Socials from '../../components/Socials'
 
 class Blog extends Component {
 
@@ -10,9 +10,10 @@ class Blog extends Component {
 
         const {posts} = this.props
 
-        return <div className={css.container}>
+        return <div>
             <Splash />
             <Post posts={posts}/>
+            <Socials />
         </div>
     }
 }
